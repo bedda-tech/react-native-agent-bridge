@@ -157,4 +157,4 @@ The full test is [`test/react.test.tsx`](https://github.com/bedda-tech/react-nat
 
 The bridge's shape (tool names, step format, `allow`, the confirm / hidden / secret marks, the benchmark task and measures) is from [vercel-labs/ui](https://github.com/vercel-labs/ui), Apache-2.0. No code was copied. See `NOTICE`.
 
-MIT, BeddaTech, LLC. A Bedda Labs package: small open-source pieces of the system that runs our agents.
+MIT, BeddaTech, LLC. A [Bedda Labs](https://labs.bedda.tech/react-native-agent-bridge) package: small open-source pieces of the system that runs our agents.
