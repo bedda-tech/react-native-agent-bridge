@@ -138,4 +138,4 @@ For the shortest-possible-path floor with no model, `npm run bench` still reprod
 
 The bridge's shape (tool names, step format, `allow`, the confirm / hidden / secret marks, the benchmark task and measures) is from [vercel-labs/ui](https://github.com/vercel-labs/ui), Apache-2.0. No code was copied. See `NOTICE`.
 
-MIT, BeddaTech, LLC.
+MIT, BeddaTech, LLC. A Bedda Labs package: small open-source pieces of the system that runs our agents.
