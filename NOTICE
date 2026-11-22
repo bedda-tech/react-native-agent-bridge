@@ -1,0 +1,21 @@
+react-native-agent-bridge
+Copyright (c) 2026 BeddaTech, LLC. MIT licensed.
+
+Borrowed ideas and API shapes, with credit:
+
+  vercel-labs/ui, "UI SDK" (https://github.com/vercel-labs/ui), Apache-2.0, Copyright Vercel, Inc.
+    - The idea of an agent bridge: components register themselves, and an agent reads them
+      with `snapshot`, finds them with `query` and drives them with `act`, instead of reading
+      a page or accessibility tree and tapping. The tool names and the shape of their input
+      (`steps: [{ ref, action, args }]`, `ref` by id or label), the `allow` callback that can
+      refuse or wait on a step, a per-element "a person must do this" mark (`data-agent-confirm`
+      there, `confirm` here), "hidden" and "secret" marks, and the benchmark's task and
+      measures (tool calls, text read, time, tokens, cost) come from UI SDK's agent bridge
+      and its agent benchmark.
+    - The three tool descriptions in `src/tools.ts` are rewritten for this package; they follow the
+      structure of the UI SDK ones. UI SDK targets the DOM (React, Vue, Svelte, Solid, Web
+      Components) and does not cover React Native, which is why this package exists.
+
+  Model Context Protocol (https://modelcontextprotocol.io), the JSON-RPC shapes in `src/mcp.ts`.
+
+No source code from vercel-labs/ui is included in this package.

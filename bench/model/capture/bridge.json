@@ -1,0 +1,20 @@
+{
+ "model": "anthropic/claude-sonnet-5.5",
+ "results": [
+  {
+   "mode": "bridge",
+   "run": 1,
+   "ok": true,
+   "why": "ok",
+   "turns": 8,
+   "toolCalls": 8,
+   "promptTokens": 30372,
+   "completionTokens": 524,
+   "costUsd": 0.065984,
+   "seconds": 11.501,
+   "toolSeconds": 1.658,
+   "saves": 1,
+   "finished": true
+  }
+ ]
+}

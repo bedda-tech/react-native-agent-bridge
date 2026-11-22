@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "bridge-bench",
+    "slug": "bridge-bench",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "newArchEnabled": true,
+    "android": { "package": "ai.bedda.bridgebench" },
+    "plugins": [["expo-build-properties", { "android": { "usesCleartextTraffic": true } }]]
+  }
+}

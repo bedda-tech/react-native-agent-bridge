@@ -1,0 +1,184 @@
+[
+ {
+  "role": "system",
+  "content": "You operate a phone app through the tools you are given. Be efficient: do not repeat reads you do not need."
+ },
+ {
+  "role": "user",
+  "content": "The Eventapp app is open on the phone and nobody is signed in. Do this: sign in with the email demo@example.test and the password <test-password>; open the app's Settings (Impostazioni, reached from the profile screen); in the privacy section turn ON 'Eventi e offerte' and 'Consigli su misura' and turn OFF 'Trovami nella ricerca'. Leave everything else as it is. When all three are set, reply with the single word DONE."
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "refusal": null,
+  "reasoning": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_016nkwBBbNZf1tjqsq9e6F6S",
+    "function": {
+     "name": "snapshot",
+     "arguments": "{}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_016nkwBBbNZf1tjqsq9e6F6S",
+  "content": "[{\"ref\":\"c1\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Apri accesso\"},{\"ref\":\"c2\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Apri accesso\"},{\"ref\":\"c4\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Apri accesso\"}]"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "refusal": null,
+  "reasoning": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01UrwfRfrGr8pxuzWcsqkUvr",
+    "function": {
+     "name": "act",
+     "arguments": "{\"steps\": [{\"ref\":\"c1\",\"action\":\"press\"}]}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01UrwfRfrGr8pxuzWcsqkUvr",
+  "content": "{\"steps\":[{\"ref\":\"c1\",\"action\":\"press\",\"ok\":true}],\"values\":[{\"ref\":\"c1\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Apri accesso\"}],\"ok\":true}"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "refusal": null,
+  "reasoning": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01TCNMEQKY86HoKznksVheu3",
+    "function": {
+     "name": "snapshot",
+     "arguments": "{}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01TCNMEQKY86HoKznksVheu3",
+  "content": "[{\"ref\":\"c1\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Apri accesso\"},{\"ref\":\"c2\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Apri accesso\"},{\"ref\":\"c4\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Apri accesso\"},{\"ref\":\"c5\",\"component\":\"text-field\",\"actions\":[\"setValue\"],\"label\":\"Email\",\"value\":\"\"},{\"ref\":\"c6\",\"component\":\"text-field\",\"actions\":[\"setValue\"],\"label\":\"Password\",\"value\":\"\"},{\"ref\":\"c7\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Accedi\"}]"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "refusal": null,
+  "reasoning": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_013iGo3rRVc4GgNc4N1QhrZK",
+    "function": {
+     "name": "act",
+     "arguments": "{\"steps\": [{\"ref\":\"c5\",\"action\":\"setValue\",\"args\":[\"demo@example.test\"]},{\"ref\":\"c6\",\"action\":\"setValue\",\"args\":[\"<test-password>\"]},{\"ref\":\"c7\",\"action\":\"press\"}]}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_013iGo3rRVc4GgNc4N1QhrZK",
+  "content": "{\"steps\":[{\"ref\":\"c5\",\"action\":\"setValue\",\"ok\":true},{\"ref\":\"c6\",\"action\":\"setValue\",\"ok\":true},{\"ref\":\"c7\",\"action\":\"press\",\"ok\":true}],\"values\":[],\"ok\":true}"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "refusal": null,
+  "reasoning": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01CB8rR4Y5EZHVBC6oGkLmdT",
+    "function": {
+     "name": "snapshot",
+     "arguments": "{}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01CB8rR4Y5EZHVBC6oGkLmdT",
+  "content": "[{\"ref\":\"c3\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Impostazioni\"},{\"ref\":\"c1\",\"component\":\"button\",\"actions\":[],\"label\":\"Apri accesso\",\"offPage\":true},{\"ref\":\"c2\",\"component\":\"button\",\"actions\":[],\"label\":\"Apri accesso\",\"offPage\":true},{\"ref\":\"c4\",\"component\":\"button\",\"actions\":[],\"label\":\"Apri accesso\",\"offPage\":true},{\"ref\":\"c5\",\"component\":\"text-field\",\"actions\":[],\"label\":\"Email\",\"value\":\"demo@example.test\",\"offPage\":true},{\"ref\":\"c6\",\"component\":\"text-field\",\"actions\":[],\"label\":\"Password\",\"value\":\"[redacted]\",\"offPage\":true},{\"ref\":\"c7\",\"component\":\"button\",\"actions\":[],\"label\":\"Accedi\",\"offPage\":true}]"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "refusal": null,
+  "reasoning": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01UG9CXggvabysQxZCerkqdV",
+    "function": {
+     "name": "act",
+     "arguments": "{\"steps\": [{\"ref\":\"c3\",\"action\":\"press\"}]}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 1,
+    "id": "toolu_01C2kDmGXut1JF2C5jDBKN5f",
+    "function": {
+     "name": "snapshot",
+     "arguments": "{}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01UG9CXggvabysQxZCerkqdV",
+  "content": "{\"steps\":[{\"ref\":\"c3\",\"action\":\"press\",\"ok\":true}],\"values\":[{\"ref\":\"c3\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Impostazioni\"}],\"ok\":true}"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01C2kDmGXut1JF2C5jDBKN5f",
+  "content": "[{\"ref\":\"c3\",\"component\":\"button\",\"actions\":[\"press\"],\"label\":\"Impostazioni\"},{\"ref\":\"c8\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Eventi e offerte\",\"checked\":false},{\"ref\":\"c9\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Consigli su misura\",\"checked\":false},{\"ref\":\"c10\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Aiuta a migliorare Lumio\",\"checked\":false},{\"ref\":\"c11\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Trovami nella ricerca\",\"checked\":true},{\"ref\":\"c12\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Promemoria eventi\",\"checked\":true},{\"ref\":\"c13\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Aggiornamenti eventi\",\"checked\":true},{\"ref\":\"c14\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Nuovi eventi\",\"checked\":false},{\"ref\":\"c1\",\"component\":\"button\",\"actions\":[],\"label\":\"Apri accesso\",\"offPage\":true},{\"ref\":\"c2\",\"component\":\"button\",\"actions\":[],\"label\":\"Apri accesso\",\"offPage\":true},{\"ref\":\"c4\",\"component\":\"button\",\"actions\":[],\"label\":\"Apri accesso\",\"offPage\":true},{\"ref\":\"c5\",\"component\":\"text-field\",\"actions\":[],\"label\":\"Email\",\"value\":\"demo@example.test\",\"offPage\":true},{\"ref\":\"c6\",\"component\":\"text-field\",\"actions\":[],\"label\":\"Password\",\"value\":\"[redacted]\",\"offPage\":true},{\"ref\":\"c7\",\"component\":\"button\",\"actions\":[],\"label\":\"Accedi\",\"offPage\":true}]"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "refusal": null,
+  "reasoning": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01CPxfkYsePPF1u2ykXDEiWq",
+    "function": {
+     "name": "act",
+     "arguments": "{\"steps\": [{\"ref\":\"c8\",\"action\":\"setChecked\",\"args\":[true]},{\"ref\":\"c9\",\"action\":\"setChecked\",\"args\":[true]},{\"ref\":\"c11\",\"action\":\"setChecked\",\"args\":[false]}]}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01CPxfkYsePPF1u2ykXDEiWq",
+  "content": "{\"steps\":[{\"ref\":\"c8\",\"action\":\"setChecked\",\"ok\":true},{\"ref\":\"c9\",\"action\":\"setChecked\",\"ok\":true},{\"ref\":\"c11\",\"action\":\"setChecked\",\"ok\":true}],\"values\":[{\"ref\":\"c8\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Eventi e offerte\",\"checked\":true},{\"ref\":\"c9\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Consigli su misura\",\"checked\":true},{\"ref\":\"c11\",\"component\":\"switch\",\"actions\":[\"setChecked\"],\"label\":\"Trovami nella ricerca\",\"checked\":false}],\"ok\":true}"
+ },
+ {
+  "role": "assistant",
+  "content": "DONE",
+  "refusal": null,
+  "reasoning": null
+ }
+]
